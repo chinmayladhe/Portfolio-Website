@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a1a2a;
+    color: #333;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    background-color: #fff;
+    border: 8px solid #00bcd4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 900px;
+    height: 600px;
+    position: relative;
+    --before-background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2), transparent); /* Default background */
+
+}
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: var(--before-background); /* Use CSS variable */
+    z-index: 1;
+}
+.left, .right {
+    padding: 40px;
+    width: 50%;
+    position: relative;
+    z-index: 2;
+}
+.left {
+    text-align: center;
+    color: #333;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 1 ); /* Shadow */
+}
+.left img {
+    border-radius: 50%;
+    border: 5px solid #00bcd4;
+    width: 150px;
+    height: 150px;
+}
+.left h1 {
+    font-size: 24px;
+    margin: 20px 0 10px;
+}
+.left h2 {
+    font-size: 18px;
+    margin: 0 0 20px;
+    color: #00bcd4;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.left .social-icons {
+    margin: 20px 0;
+}
+.left .social-icons a {
+    color: #00bcd4;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.left p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+.left .buttons {
+    margin-top: 20px;
+}
+.left .buttons a {
+    display: inline-block;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #00bcd4;
+    background-color: #fff;
+    font-weight: bold;
+}
+.right {
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5); /* Shadow */
+}
+.right h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.right .experience, .right .education, .right .services, .right .skills, .right .projects {
+    margin-bottom: 20px;
+}
+.right .experience i, .right .education i, .right .services i, .right .skills i, .right .projects i {
+    color: #00bcd4;
+    margin-right: 10px;
+}
+.right .experience h3, .right .education h3, .right .services h3, .right .skills h3, .right .projects h3 {
+    font-size: 18px;
+    margin: 0;
+}
+.right .experience p, .right .education p, .right .services p, .right .skills p, .right .projects p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0 0;
+}
+.container_one {
+    display: flex;
+}
+.container_two, .container_three, .container_four {
+    display: none;
+}
+.page21, .page31{
+    text-align: left;
+}
+.container_contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height as needed */
+    background-color: #0a1a2a; /* Same background color as the main body */
+}
+
+.left form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+.left form div {
+    margin-bottom: 15px; /* Space between fields */
+}
+
+.left label {
+    font-size: 14px;
+    margin-bottom: 5px; /* Space between label and input */
+    color: #333; /* Dark color for contrast */
+}
+
+.left input, .left textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Consistent font size */
+}
+
+.left button {
+    background-color: #00bcd4; /* Primary color */
+    color: #fff; /* White text */
+    padding: 10px; /* Padding inside button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Larger font for button */
+}
+
+.left button:hover {
+    background-color: #008c9e; /* Darker shade on hover */
+}
+
+/* Flip classes */
+.flip-to-left {
+    transform: rotateY(-180deg); /* Flip effect to left */
+}
+
+.flip-to-right {
+    transform: rotateY(180deg); /* Flip effect to right */
+}
